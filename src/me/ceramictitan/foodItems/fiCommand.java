@@ -40,8 +40,9 @@ public class fiCommand implements CommandExecutor {
 			}
 			String[] effects = effect.split(",");
 			for (String eff : effects) {
-				if (eff.equalsIgnoreCase("confusion")) doSomething();
-				if (eff.equalsIgnoreCase("jump")) doSomethingElse();
+				switch (eff) {
+				
+				}
 			}
 			return true;
 		}
