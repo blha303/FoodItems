@@ -40,8 +40,10 @@ public class fiCommand implements CommandExecutor {
 			}
 			String[] effects = effect.split(",");
 			for (String eff : effects) {
-				switch (eff) {
-				
+				switch (eff.toLowerCase()) {
+				case "confusion": doConfusionThing(); break;
+				case "haste": doHasteThing(); break;
+				default: doNoneOfTheAboveThing(); break;
 				}
 			}
 			return true;
