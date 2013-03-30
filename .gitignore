@@ -46,11 +46,8 @@ dependency-reduced-pom.xml
 
 # Project files #
 #################
-.classpath
 .externalToolBuilders
 .idea
-.project
-.settings
 build
 dist
 nbproject

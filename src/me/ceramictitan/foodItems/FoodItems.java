@@ -15,7 +15,7 @@ public class FoodItems extends JavaPlugin {
 
 	@Override
 	public void onEnable(){
-		addConfig();
+		setConfig();
 		File g = new File(getDataFolder(), "items.yml");
 		if (!g.exists())
 			g.mkdirs();
@@ -36,11 +36,34 @@ public class FoodItems extends JavaPlugin {
 
 	}
 
-	public void addConfig(){
-		getConfig().addDefault(path, value);
-		getConfig().addDefault(path, value);
-
+	public void setConfig(){
+		getConfig().addDefault("foods.apple", "NONE");
+		getConfig().addDefault("foods.baked-potato", "NONE");
+		getConfig().addDefault("foods.bread", "NONE");
+		getConfig().addDefault("foods.cake", "NONE");
+		getConfig().addDefault("foods.carrot", "NONE");
+		getConfig().addDefault("foods.cooked-chicken", "NONE");
+		getConfig().addDefault("foods.cooked-fish", "NONE");
+		getConfig().addDefault("foods.cooked-porkchop", "NONE");
+		getConfig().addDefault("foods.cookie", "NONE");
+		getConfig().addDefault("foods.golden-apple", "NONE");
+		getConfig().addDefault("foods.golden-carrot", "NONE");
+		getConfig().addDefault("foods.melon", "NONE");
+		getConfig().addDefault("foods.mushroom-stew", "NONE");
+		getConfig().addDefault("foods.poisonous-potato", "NONE");
+		getConfig().addDefault("foods.potato", "NONE");
+		getConfig().addDefault("foods.pumpkin-pie", "NONE");
+		getConfig().addDefault("foods.raw-beef", "NONE");
+		getConfig().addDefault("foods.raw-chicken", "NONE");
+		getConfig().addDefault("foods.raw-fish", "NONE");
+		getConfig().addDefault("foods.raw-porkchop", "NONE");
+		getConfig().addDefault("foods.rotten-flesh", "NONE");
+		getConfig().addDefault("foods.spider-eye", "NONE");
+		getConfig().addDefault("foods.steak", "NONE");
+		getConfig().options().copyDefaults(true);
+		saveConfig();
 	}
+	
 	@Override
 	public FileConfiguration getConfig() {
 		return this.config;
